@@ -1,6 +1,6 @@
 const getFood = (id="potato") => {
    // let inputText = document.getElementById("potato").value;
-   var header = document.getElementById("myDIV");
+   var mainpart = document.getElementById("mainpart");
     //     var btns = header.getElementsByClassName("btn");
     //     for (var i = 0; i < btns.length; i++) {
     //     btns[i].addEventListener("click", function() {
@@ -12,7 +12,7 @@ const getFood = (id="potato") => {
     //    });
 //}
 
-       this.className = 'bg-slate-500';
+      // mainpart.classList.add("-translate-y-6");
 
     let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${id}`
     fetch(url)
@@ -20,6 +20,7 @@ const getFood = (id="potato") => {
         .then(data => getitems(data.meals))
         .catch(error => console.log('Error: ', error));
 }
+
 getFood();
 
 //document.getElementById("potato").addEventListener("click", getFood);
@@ -34,7 +35,7 @@ const getitems = (meals) => {
     container.innerHTML = '';
     meals.forEach(meal => {
         let mealCard = document.createElement('div');    
-        mealCard.classList = 'card card-compact bg-base-100 shadow-xl';
+        mealCard.classList = 'card card-compact bg-base-100 shadow-xl border-solid  border-2 border-x-gray-300 hover:border-x-indigo-600';
         
         mealCard.innerHTML = `
             <figure>
@@ -43,9 +44,6 @@ const getitems = (meals) => {
             <div class="card-body">
                 <h2 class="card-title">${meal.strMeal}</h2>
                 <p title="${meal.strInstructions}" >${meal.strInstructions.slice(0,200)}...</p>
-                <div class="card-actions justify-end">
-                    <button onclick="handleShowDetails(${meal.idMeal})" class="btn btn-primary">Show Details</button>
-                </div>
             </div>   
         `;
     container.appendChild(mealCard);

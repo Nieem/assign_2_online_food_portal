@@ -1,9 +1,10 @@
-<html lang="en"></html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>King Food Bar</title>
+  <link rel="icon" type="image/x-icon" href="resource/logos/applogo.png">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font awsome kit -->
@@ -13,7 +14,7 @@
 <body>
   <header>
     <!-- Navbar start -->
-    <div class="navbar bg-base-200">
+    <div class="navbar bg-base-200 fixed top-0 z-10">
 
         <div class="navbar-start">
             <img src="resource/logos/applogo.png" alt="Logo" class="w-14">
@@ -25,7 +26,7 @@
 
           <div class="navbar-end hidden lg:flex md:flex">
             <ul class="menu menu-horizontal px-1">
-                <li><a id="potato" onclick="getFood(this.id)" class=" ">Potato</a></li>
+                <li><a id="potato" onclick="getFood(this.id)">Potato</a></li>
                 <li><a id="soup" onclick="getFood(this.id)"class="list">Soup</a></li>
                 <li><a id="chicken" onclick="getFood(this.id)"class="list">Chicken</a></li>
                 <li><a id="beef" onclick="getFood(this.id)"class="list">Beef</a></li>
@@ -65,10 +66,11 @@
 </div>
 
  <!-- end humberg -->
-    </div>
+ </div>
     <!-- Navbar end -->
 <!-- banner start -->
-<div class="carousel w-full">
+ <div class="">
+<div class="carousel w-full overflow-y-hidden">
   <!-- Carousel # 1 -->
   <div id="slide1" class="carousel-item relative w-full">
     <div class="hero" style="background-image: url(resource/images/banner1.png);">
@@ -146,14 +148,15 @@
     </div>
   </div>
 </div>
+</div>
+</header>
   <!-- banner end -->
-<main class="container mx-auto mt-8">
+<main class="container mx-auto mt-8" id="mainpart">
 <!-- card start -->
  <!--  start featured products using card -->
-        <div class=" items-center text-center mt-5">
+        <div class=" items-center text-center mt-7">
           <h1 class="text-2xl text-gray-800 font-bold"> Our Featured Products</h1>
-          <p class="px-20">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-            quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+          <p class="px-20">Faster than your cravings can blink. Experience the super-fast delivery and get fresh food.</p>
         </div>
         
        <!-- <div class="flex flex-col md:flex-wrap lg:flex-row gap-1 mt-1 justify-center"> -->
@@ -162,12 +165,40 @@
        </div> 
  <!-- card end -->
 
+
+  <!-- faq start -->
+  <div class="join join-vertical w-full justify-center p-7">
+    <div class=" items-center text-center my-7">
+      <h1 class="text-2xl text-gray-800 font-bold"> Frequently Asked Question</h1>
+    </div>
+
+    <div class="collapse collapse-arrow join-item border-base-300 border">
+      <input type="radio" name="my-accordion-4" checked="checked" />
+      <div class="collapse-title text-xl font-medium">Q: Are food ingredients natural?</div>
+      <div class="collapse-content">
+        <p>yes</p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border-base-300 border">
+      <input type="radio" name="my-accordion-4" />
+      <div class="collapse-title text-xl font-medium">Q: How do I know what ingredients are in my food?</div>
+      <div class="collapse-content">
+        <p>you can check by expert.</p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border-base-300 border">
+      <input type="radio" name="my-accordion-4" />
+      <div class="collapse-title text-xl font-medium">Q: Are food colors safe for children?</div>
+      <div class="collapse-content">
+        <p>yes</p>
+      </div>
+    </div>
+  </div>
+   <!-- faq end -->
+
+
 </main>
 
-  </header>
-  <main>
-
-  </main>
 
   <footer>
 
@@ -176,3 +207,4 @@
 
   </script>
 </body>
+</html>

@@ -14,7 +14,7 @@
 <body>
   <header>
     <!-- Navbar start -->
-    <div class="navbar bg-sky-950 fixed top-0 z-10 text-white">
+    <div class="navbar fixed  bg-sky-950 top-0 text-white z-20" id="nabbarhide">
 
         <div class="navbar-start">
             <img src="resource/logos/applogo.png" alt="Logo" class="w-14">
@@ -26,10 +26,10 @@
 
           <div class="navbar-end hidden lg:flex md:flex">
             <ul class="menu menu-horizontal px-1">
-                <li><a id="potato" onclick="getFood(this.id)" class="hover:bg-red-700">Potato</a></li>
-                <li><a id="soup" onclick="getFood(this.id)"class="list hover:bg-red-700">Soup</a></li>
-                <li><a id="chicken" onclick="getFood(this.id)"class="list hover:bg-red-700">Chicken</a></li>
-                <li><a id="beef" onclick="getFood(this.id)"class="list hover:bg-red-700">Beef</a></li>
+                <li><a id="potato" onclick="getFood(this.id)" class="hover:bg-red-700" href="#mainpart">Potato</a></li>
+                <li><a id="soup" onclick="getFood(this.id)"class="list hover:bg-red-700" href="#mainpart">Soup</a></li>
+                <li><a id="chicken" onclick="getFood(this.id)"class="list hover:bg-red-700" href="#mainpart">Chicken</a></li>
+                <li><a id="beef" onclick="getFood(this.id)"class="list hover:bg-red-700" href="#mainpart">Beef</a></li>
             </ul>
           </div>
 
@@ -55,11 +55,11 @@
 
     <ul
     tabindex="0"
-    class="menu menu-sm dropdown-content bg-base-100 rounded-box -translate-x-20 z-[1] mt-3 w-32 p-2 shadow">
-    <li><a id="potato" onclick="getFood(this.id)">Potato</a></li>
-    <li><a id="soup" onclick="getFood(this.id)">Soup</a></li>
-    <li><a id="chicken" onclick="getFood(this.id)">Chicken</a></li>
-    <li><a id="beef" onclick="getFood(this.id)">Beef</a></li>
+    class="menu menu-sm dropdown-content z-30 bg-slate-800 rounded-box -translate-x-20  mt-3 w-32 p-2 shadow hover:bg-slate-400">
+    <li><a id="potato" onclick="getFood(this.id)" class=" active:bg-slate-400 hover:bg-red-700" href="#mainpart">Potato</a></li>
+        <li><a id="soup" onclick="getFood(this.id)" class="hover:bg-red-700" href="#mainpart">Soup</a></li>
+        <li><a id="chicken" onclick="getFood(this.id)" class="hover:bg-red-700" href="#mainpart">Chicken</a></li>
+        <li><a id="beef" onclick="getFood(this.id)" class="hover:bg-red-700" href="#mainpart">Beef</a></li>
   </ul>
    
   </div>
@@ -69,19 +69,19 @@
  </div>
     <!-- Navbar end -->
 <!-- banner start -->
- <div class="">
-<div class="carousel w-full overflow-y-hidden">
+ 
+<div class="carousel w-full mt-16 z-10"> 
   <!-- Carousel # 1 -->
   <div id="slide1" class="carousel-item relative w-full">
     <div class="hero" style="background-image: url(resource/images/banner1.png);">
       <div class="hero-overlay bg-opacity-60"></div>
       <div class="hero-content text-neutral-content text-center py-20">
         <div class="max-w-md">
-          <h1 class="mb-5 text-3xl font-bold">Hello there</h1>
+          <h1 class="mb-5 text-3xl font-bold"></h1>
           <p class="mb-5">
             We don't charge a high commission to our outlets, in return you get exclusive discounts and offers. Now order your favourite food.
           </p>
-          <button class="btn btn-primary">Get Started</button>
+          <button class="btn btn-primary">Buy now</button>
         </div>
       </div>
     </div>
@@ -96,11 +96,10 @@
       <div class="hero-overlay bg-opacity-60"></div>
       <div class="hero-content text-neutral-content text-center">
         <div class="max-w-md">
-          <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
           <p class="mb-5">
             same food same resturent cheaper in King Food Bar.
           </p>
-          <button class="btn btn-primary">Get Started</button>
+          <button class="btn btn-primary">Buy now</button>
         </div>
       </div>
     </div>
@@ -115,11 +114,10 @@
       <div class="hero-overlay bg-opacity-60"></div>
       <div class="hero-content text-neutral-content text-center">
         <div class="max-w-md">
-          <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
           <p class="mb-5">
             We have a fair pricing policy for all resturent listed on our app.
           </p>
-          <button class="btn btn-primary">Get Started</button>
+          <button class="btn btn-primary">Buy now</button>
         </div>
       </div>
     </div>
@@ -134,11 +132,10 @@
       <div class="hero-overlay bg-opacity-60"></div>
       <div class="hero-content text-neutral-content text-center">
         <div class="max-w-md">
-          <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
           <p class="mb-5">
             Order takeway Online,Get Exclusive discounts.
           </p>
-          <button class="btn btn-primary">Get Started</button>
+          <button class="btn btn-primary">Buy now</button>
         </div>
       </div>
     </div>
@@ -148,14 +145,13 @@
     </div>
   </div>
 </div>
-</div>
 </header>
   <!-- banner end -->
 <main class="container mx-auto mt-8" id="mainpart">
 <!-- card start -->
  <!--  start featured products using card -->
         <div class=" items-center text-center mt-7">
-          <h1 class="text-2xl text-gray-800 font-bold"> Our Featured Products</h1>
+          <h1 class="text-2xl text-gray-800 font-bold"> Top Trending Products</h1>
           <p class="px-20">Faster than your cravings can blink. Experience the super-fast delivery and get fresh food.</p>
         </div>
         
@@ -168,7 +164,7 @@
 
   <!-- faq start -->
   <div class="join join-vertical w-full justify-center p-7">
-    <div class=" items-center text-center my-7">
+    <div class=" items-center text-center my-5">
       <h1 class="text-2xl text-gray-800 font-bold"> Frequently Asked Question</h1>
     </div>
 
@@ -200,7 +196,7 @@
 </main>
 
     <!-- footer start -->
-<footer class="footer bg-sky-950 text-base-content p-10 px-20 justify-between text-white">
+<footer class="footer bg-sky-950 text-base-content p-10 px-20 justify-between text-white mt-5">
   <nav>
     <h6 class="footer-title">Services</h6>
     <a class="link link-hover">Branding</a>

@@ -1,6 +1,5 @@
 const getFood = (id="potato") => {
    // let inputText = document.getElementById("potato").value;
-   
         //    nav button active change
         var header = document.getElementById("navbtnId");
         var btns = header.getElementsByClassName("navbtn");
@@ -13,24 +12,14 @@ const getFood = (id="potato") => {
         }
         this.className += " active1";
        });
-     }
-          //  end  nav button active change
-      // mainpart.classList.add("-translate-y-6");
-
-      
-      
-      
-      // Create a MediaQueryList object
-      //var mainpart = document.getElementById("mainpart");
-     
+     }  //  end  nav button active change  
     let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${id}`
     fetch(url)
         .then(res => res.json())
         .then(data => getitems(data.meals))
         .catch(error => console.log('Error: ', error));
-
-        var x = window.matchMedia("(max-width: 640px)")
-      
+           // Create a MediaQueryList object 
+        var x = window.matchMedia("(max-width: 640px)") 
         // start nav bar hide on scroll
        var prevScrollpos = window.scrollY;
            window.onscroll = function() {
@@ -44,31 +33,17 @@ const getFood = (id="potato") => {
                document.getElementById("nabbarhide").style.top = "-70px";
            }
            prevScrollpos = currentScrollPos;
-
         }
         //end nav bar hide on scroll
-
-
-
 }
-
-
+//   index page loading
 const reload=()=>{
     location.href="index.html";
    }
+//    initial data load
 getFood();
 
-//reload();
-
-
-//document.getElementById("potato").addEventListener("click", getFood);
-//  function myFunction() {
-//      alert ("YOU CLICKED ME!");
-//   }
-
-
 const getitems = (meals) => {
-    //console.log('Data is: ', meals);
     let container = document.getElementById("card-data");
     container.innerHTML = '';
     meals.forEach(meal => {

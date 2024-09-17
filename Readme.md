@@ -24,6 +24,6 @@
 2. Component Library for Tailwind CSS: DaisyUI
 3. raw css & js
 
-##### -> Live link of my Web page is <http://github.com>
+##### -> Live link of my Web page is <https://raysul-hasan.w3spaces.com/>
 
 ***Bootcamp TOT serial No: 40

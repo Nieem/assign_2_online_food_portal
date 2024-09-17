@@ -57,6 +57,9 @@ const getitems = (meals) => {
             <div class="card-body border-solid border-1  border-gray-400">
                 <h2 class="card-title">${meal.strMeal}</h2>
                 <p title="${meal.strInstructions}" >${meal.strInstructions.slice(0,200)}...</p>
+                <div class="card-actions justify-center">
+                     <button class="btn btn-primary bg-red-900">Order Now</button>
+                 </div>
             </div>   
         `;
     container.appendChild(mealCard);

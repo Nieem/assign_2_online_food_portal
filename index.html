@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>King Food Bar</title>
-  <link rel="icon" type="image/x-icon" href="resource/logos/applogo.png">
+  <link rel="icon" type="image/x-icon" href="resource/logos/applogo.png" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="src/css/custom.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font awsome kit -->
   <script src="https://kit.fontawesome.com/9e8306aeda.js" crossorigin="anonymous"></script>
@@ -17,19 +18,19 @@
     <div class="navbar fixed  bg-sky-950 top-0 text-white z-20" id="nabbarhide">
 
         <div class="navbar-start">
-            <img src="resource/logos/applogo.png" alt="Logo" class="w-14">
-            <span class="text-2xl font-bold ml-2">King Food Bar</span>
+            <img src="resource/logos/applogo.png" alt="Logo" class="w-14" onclick="reload()">
+            <span class="text-2xl font-bold ml-2" onclick="reload()">King Food Bar</span>
     
           </div>
            
           
 
-          <div class="navbar-end hidden lg:flex md:flex">
+          <div id="navbtnId" class="navbar-end hidden lg:flex md:flex">
             <ul class="menu menu-horizontal px-1">
-                <li><a id="potato" onclick="getFood(this.id)" class="hover:bg-red-700" href="#mainpart">Potato</a></li>
-                <li><a id="soup" onclick="getFood(this.id)"class="list hover:bg-red-700" href="#mainpart">Soup</a></li>
-                <li><a id="chicken" onclick="getFood(this.id)"class="list hover:bg-red-700" href="#mainpart">Chicken</a></li>
-                <li><a id="beef" onclick="getFood(this.id)"class="list hover:bg-red-700" href="#mainpart">Beef</a></li>
+                <li><a id="potato" onclick="getFood(this.id)" class="navbtn hover:bg-red-700" href="#mainpart">Potato</a></li>
+                <li><a id="soup" onclick="getFood(this.id)"class="navbtn hover:bg-red-700" href="#mainpart">Soup</a></li>
+                <li><a id="chicken" onclick="getFood(this.id)"class="navbtn hover:bg-red-700" href="#mainpart">Chicken</a></li>
+                <li><a id="beef" onclick="getFood(this.id)"class="navbtn hover:bg-red-700" href="#mainpart">Beef</a></li>
             </ul>
           </div>
 
@@ -56,7 +57,7 @@
     <ul
     tabindex="0"
     class="menu menu-sm dropdown-content z-30 bg-slate-800 rounded-box -translate-x-20  mt-3 w-32 p-2 shadow hover:bg-slate-400">
-    <li><a id="potato" onclick="getFood(this.id)" class=" active:bg-slate-400 hover:bg-red-700" href="#mainpart">Potato</a></li>
+    <li><a id="potato" onclick="getFood(this.id)" class="hover:bg-red-700" href="#mainpart">Potato</a></li>
         <li><a id="soup" onclick="getFood(this.id)" class="hover:bg-red-700" href="#mainpart">Soup</a></li>
         <li><a id="chicken" onclick="getFood(this.id)" class="hover:bg-red-700" href="#mainpart">Chicken</a></li>
         <li><a id="beef" onclick="getFood(this.id)" class="hover:bg-red-700" href="#mainpart">Beef</a></li>

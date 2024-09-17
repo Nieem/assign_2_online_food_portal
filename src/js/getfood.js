@@ -1,17 +1,20 @@
 const getFood = (id="potato") => {
    // let inputText = document.getElementById("potato").value;
    
-    //     var btns = header.getElementsByClassName("btn");
-    //     for (var i = 0; i < btns.length; i++) {
-    //     btns[i].addEventListener("click", function() {
-    //     var current = document.getElementsByClassName("active");
-    //     if (current.length > 0) { 
-    //         current[0].className = current[0].className.replace(" active", "");
-    //     }
-    //     this.className += " active";
-    //    });
-//}
-
+        //    nav button active change
+        var header = document.getElementById("navbtnId");
+        var btns = header.getElementsByClassName("navbtn");
+        console.log(btns);
+        for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active1");
+        if (current.length > 0) { 
+            current[0].className = current[0].className.replace(" active1", "");
+        }
+        this.className += " active1";
+       });
+     }
+          //  end  nav button active change
       // mainpart.classList.add("-translate-y-6");
 
       
@@ -49,7 +52,14 @@ const getFood = (id="potato") => {
 
 }
 
+
+const reload=()=>{
+    location.href="index.html";
+   }
 getFood();
+
+//reload();
+
 
 //document.getElementById("potato").addEventListener("click", getFood);
 //  function myFunction() {
